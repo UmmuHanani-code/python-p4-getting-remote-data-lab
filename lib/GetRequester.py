@@ -15,3 +15,6 @@ class GetRequester:
     def load_json(self):
         response_text = self.get_response_body().decode('utf-8')
         return json.loads(response_text)
+
+get_requester = GetRequester('https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json')
+print(get_requester.load_json())
